@@ -1,1 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
+$portfolio_palette: (
+    header: #93BDC4,
+    footer: #153D5C,
+    color-primary: #000,
+    color-accent: #EA8786,
+    color-background: #cffdf8,
+    color-text: #757575,
+    light-shades: #F3F2F2,
+    main-color: #B95457,
+);
+
+.text-light-color {
+    color: map-get($portfolio_palette,light-shades);
+}
+
+.text-accent-color {
+    color: map-get($portfolio_palette,color-accent);
+}
+
+.text-dark-color {
+    color: map-get($portfolio_palette,footer);
+}
+
+.title-color {
+    color: map-get($portfolio_palette,color-text);
+}
+
+.btn-accent:hover {
+    color: #fff;
+}
+
+.brand-color {
+    color: map-get($portfolio_palette,color-accent);
+}
+
+body, .light-color-bg {
+    background-color: map-get($portfolio_palette,light-shades);
+}
+
+.accent {
+    background-color: map-get($portfolio_palette,color-accent);
+}
+
+.btn-accent {
+    background-color: map-get($portfolio_palette,color-accent);
+}
+
+.footer-bg {
+    background-color: map-get($portfolio_palette,footer);
+}
+
+.header-bg {
+    background: 
+    linear-gradient(225deg, map-get($portfolio_palette,header) 25%, transparent 25%);	
+    background-size: 100px 100px;
+    background-color: map-get($portfolio_palette,header);
+}
+
+.main-color {
+    background-color: map-get($portfolio_palette,main-color);
+}
