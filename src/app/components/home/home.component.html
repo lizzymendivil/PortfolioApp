@@ -1,18 +1,24 @@
-<div class="container">
+<div class="container animated fadeIn">
   <section class="my-5">
     <div class="row">
-      <div class="col-md-5">
+      <div class="col-md-5 wow slideInLeft">
         <div class="view overlay zoom rounded z-depth-2 mb-lg-0 mb-4">
-          <img class="img-thumbnail img-fluid" src="../../../assets/images/lmendivil2.jpg" alt="Lizzy Mendivil Avatar">
+          <img class="img-thumbnail img-fluid" src="../../../assets/images/lizzy-mendivil.jpg" alt="Lizzy Mendivil Avatar">
           <a>
             <div class="mask rgba-white-slight"></div>
           </a>
         </div>
   
       </div>
-      <div class="col-md-7">
+      <div class="col-md-7 wow slideInRight">
         <h3 class="font-weight-bold mb-3 text-dark-color"><strong>Hello, a bit about me:</strong></h3>
-        <p class="text-justify">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus et aut officiis debitis.</p>
+        <p class="text-justify">{{ _is.info.biography }}</p>
+        <p class="text-justify">I love bike riding and running around outside. These two activities make me feel good, my brain releases endorphins and I start feeling even better. I am a cat lover, play with them and caress them is one of my favorite hobbies. Popcorn and movies at home is better than a night party.</p>
+        <hr>
+        <blockquote class="blockquote">
+            <p class="mb-0">Everyone should eat and drink and find enjoyment for all his hard work. It is the gift of God.</p>
+            <footer class="blockquote-footer">The Bible in <cite title="Source Title">Ecclesiastes 3:13</cite></footer>
+        </blockquote>
         <a class="btn btn-accent btn-md" routerLink="/resume">Read more</a>
       </div>
     </div>

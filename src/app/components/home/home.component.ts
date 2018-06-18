@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { InformationService } from '../../services/information.service';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(public _is:InformationService) { }
 
   ngOnInit() {
   }

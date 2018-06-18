@@ -7,9 +7,35 @@ $portfolio_palette: (
     color-text: #757575,
     light-shades: #F3F2F2,
     main-color: #B95457,
+    white-color: #fff,
 );
 
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 17px;
+}
+
+body {
+    font-family: 'Advent Pro', sans-serif;
+    overflow-x: hidden;
+}
+
+.text-main-color {
+    color: map-get($portfolio_palette,main-color);
+}
+
+.font-web-title {
+    font-family: 'Slackey', cursive;
+}
+
 .text-light-color {
+    color: map-get($portfolio_palette,light-shades);
+}
+
+.text-light-color-a, .text-light-color-a:hover {
     color: map-get($portfolio_palette,light-shades);
 }
 
@@ -26,7 +52,7 @@ $portfolio_palette: (
 }
 
 .btn-accent:hover {
-    color: #fff;
+    color: map-get($portfolio_palette,white-color);
 }
 
 .brand-color {
@@ -45,8 +71,13 @@ body, .light-color-bg {
     background-color: map-get($portfolio_palette,color-accent);
 }
 
-.footer-bg {
+.active-link, .footer-bg {
     background-color: map-get($portfolio_palette,footer);
+}
+
+.main-bg-color {
+    background-color: map-get($portfolio_palette,main-color);
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 .header-bg {
@@ -58,4 +89,70 @@ body, .light-color-bg {
 
 .main-color {
     background-color: map-get($portfolio_palette,main-color);
+}
+
+.link-not-found {
+    color: map-get($portfolio_palette,color-accent);
+}
+
+.link-not-found:hover {
+    color: map-get($portfolio_palette,header);
+}
+
+.form-style input[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid map-get($portfolio_palette,main-color);
+    -webkit-box-shadow: 0 1px 0 0 map-get($portfolio_palette,main-color);
+    box-shadow: 0 1px 0 0 map-get($portfolio_palette,main-color);
+}
+.form-style input[type=text]:focus:not([readonly]) + label {
+    color: map-get($portfolio_palette,main-color);
+}
+.form-style input[type=email]:focus:not([readonly]) {
+    border-bottom: 1px solid map-get($portfolio_palette,main-color);
+    -webkit-box-shadow: 0 1px 0 0 map-get($portfolio_palette,main-color);
+    box-shadow: 0 1px 0 0 map-get($portfolio_palette,main-color);
+}
+.form-style input[type=email]:focus:not([readonly]) + label {
+    color: map-get($portfolio_palette,main-color);
+}
+.form-style textarea[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid map-get($portfolio_palette,main-color);
+    -webkit-box-shadow: 0 1px 0 0 map-get($portfolio_palette,main-color);
+    box-shadow: 0 1px 0 0 map-get($portfolio_palette,main-color);
+}
+.form-style textarea[type=text]:focus:not([readonly]) + label {
+    color: map-get($portfolio_palette,main-color);
+}
+.form-style input[type=password]:focus:not([readonly]) {
+    border-bottom: 1px solid map-get($portfolio_palette,main-color);
+    -webkit-box-shadow: 0 1px 0 0 map-get($portfolio_palette,main-color);
+    box-shadow: 0 1px 0 0 map-get($portfolio_palette,main-color);
+}
+.form-style input[type=password]:focus:not([readonly]) + label {
+    color: map-get($portfolio_palette,main-color);
+}
+
+@media (max-width: 450px) { 
+    .size-web-title {
+        font-size: 50px;
+      }
+ }
+
+ .animated {
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+ }
+
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+     }
+
+     to {
+         opacity: 1;
+     }
+ }
+
+ .fadeIn {
+    animation-name: fadeIn;
 }

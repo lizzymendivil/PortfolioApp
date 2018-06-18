@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { InformationService } from '../../services/information.service';
+
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor( public _is:InformationService ) { }
 
   ngOnInit() {
   }
