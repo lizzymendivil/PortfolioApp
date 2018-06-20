@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { CollapseModule, WavesModule } from 'angular-bootstrap-md'
+
 @Component({
   selector: 'app-resume',
   templateUrl: './resume.component.html',
@@ -7,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResumeComponent implements OnInit {
 
+  public isCollapsed:any;
   constructor() { }
 
   ngOnInit() {

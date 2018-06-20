@@ -26,7 +26,6 @@ export class ContactInfoService {
   }
 
   public addMessage(data: {name: string, email: string, message: string}) {
-    console.log('addMessage');
     return this.firestore.collection('messages').add(data);
   }
 
