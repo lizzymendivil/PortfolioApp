@@ -25,8 +25,8 @@
 </mdb-navbar>
 <div class="jumbotron mt-5 header-bg text-light-color">
   <div class="container text-center">
-    <h1 class="display-3 font-web-title size-web-title wow pulse">Lizzy Mendivil</h1>
-    <p class="h4 font-web-title wow pulse">Software and Web Developer</p>
+    <h1 class="display-3 font-web-title size-web-title wow pulse">{{ (_info | async)?.title }}</h1>
+    <p class="h4 font-web-title wow pulse">{{ (_info | async)?.subtitle }}</p>
     <p><a class="btn btn-accent btn-lg" routerLink="/contact" role="button">Contact Me</a></p>
   </div>
 </div>
