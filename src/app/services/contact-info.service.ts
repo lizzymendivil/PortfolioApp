@@ -25,4 +25,9 @@ export class ContactInfoService {
     return this.infoDoc.valueChanges()
   }
 
+  public addMessage(data: {name: string, email: string, message: string}) {
+    console.log('addMessage');
+    return this.firestore.collection('messages').add(data);
+  }
+
 }

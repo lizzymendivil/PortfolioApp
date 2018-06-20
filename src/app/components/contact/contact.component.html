@@ -5,16 +5,17 @@
         <div class="col-lg-8">
           <div class="card-body form-style">
             <h3 class="mt-4 text-dark-color">Let's Get In Touch</h3>
+            <form (ngSubmit)="newMessage(newMessageForm.value)" [formGroup]="newMessageForm">
             <div class="row">
               <div class="col-md-6">
                 <div class="md-form mb-0">
-                  <input type="text" id="form-contact-name" class="form-control" mdbInputDirective>
+                  <input type="text" id="form-contact-name" class="form-control" formControlName="name" mdbInputDirective>
                   <label for="form-contact-name" class="">Your name</label>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="md-form mb-0">
-                  <input type="text" id="form-contact-email" class="form-control" mdbInputDirective>
+                  <input type="email" id="form-contact-email" class="form-control" formControlName="email" mdbInputDirective>
                   <label for="form-contact-email" class="">Your email</label>
                 </div>
               </div>
@@ -22,15 +23,15 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="md-form mb-0">
-                  <textarea type="text" id="form-contact-message" class="form-control md-textarea" mdbInputDirective rows="3"></textarea>
+                  <textarea type="text" id="form-contact-message" class="form-control md-textarea" formControlName="message" mdbInputDirective rows="3"></textarea>
                   <label for="form-contact-message">Your message</label>
                   <div class="mt-4">
-                    <button class="btn main-color">
-                      <i class="fa fa-send-o mr-1"></i> Submit</button>
+                      <input type="submit" class="btn main-color" [disabled]="!newMessageForm.valid" value="Submit">
                   </div>
                 </div>
               </div>
             </div>
+          </form>
           </div>
         </div>
         <div class="col-lg-4">
@@ -40,15 +41,15 @@
             <ul class="text-lg-left list-unstyled ml-4">
               <li>
                 <p>
-                  <i class="fa fa-map-marker pr-2"></i>{{ info.city }}</p>
+                  <i class="fa fa-map-marker pr-2"></i>{{ (_contact_info | async)?.city }}</p>
               </li>
               <li>
                 <p>
-                  <i class="fa fa-phone pr-2"></i><a class ="text-light-color-a" href="tel:+59161368424">{{ info.phone }}</a></p>
+                  <i class="fa fa-phone pr-2"></i><a class ="text-light-color-a" href="tel:+59161368424">{{ (_contact_info | async)?.phone }}</a></p>
               </li>
               <li>
                 <p>
-                  <i class="fa fa-envelope pr-2"></i><a class="text-light-color-a" href="mailto:lizzy.mb@gmail.com">{{ info.email }}</a></p>
+                  <i class="fa fa-envelope pr-2"></i><a class="text-light-color-a" href="mailto:lizzy.mb@gmail.com">{{ (_contact_info | async)?.email }}</a></p>
               </li>
             </ul>
           </div>

@@ -4,9 +4,12 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { HttpModule } from '@angular/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -17,6 +20,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 
 import { InformationService } from './services/information.service';
 import { ContactInfoService } from './services/contact-info.service';
+
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -30,10 +35,14 @@ import { ContactInfoService } from './services/contact-info.service';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    BrowserAnimationsModule, 
+    ToastrModule.forRoot() 
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [
