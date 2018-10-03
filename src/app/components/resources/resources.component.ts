@@ -10,7 +10,7 @@ import { ResourcesService } from '../../services/resources.service';
 export class ResourcesComponent implements OnInit {
   resources: ResourcesInterface[];
 
-  constructor(private resourcesService: ResourcesService) {}
+  constructor(public resourcesService: ResourcesService) {}
 
   ngOnInit() {
     /* this.resourcesService.getResources().subscribe(resources => {
