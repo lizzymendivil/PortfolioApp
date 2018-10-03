@@ -51,10 +51,10 @@ export class ContactComponent implements OnInit {
     // this.getContactInfo();
   }
 
-  getContactInfo(): void {
+  /* getContactInfo(): void {
     const id = 'KaQvx6JUv4ecSjesM8XF';
     this.contactInfoService.getContactInfo(id).subscribe(info => (this.info = info));
-  }
+  } */
 
   public newMessage(form, documentId = null) {
       let data = {

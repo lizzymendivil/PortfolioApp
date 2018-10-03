@@ -20,8 +20,10 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 
 import { InformationService } from './services/information.service';
 import { ContactInfoService } from './services/contact-info.service';
+import { ResourcesService } from './services/resources.service';
 
 import { ToastrModule } from 'ngx-toastr';
+import { ResourcesComponent } from './components/resources/resources.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { ToastrModule } from 'ngx-toastr';
     HomeComponent,
     ResumeComponent,
     ContactComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ResourcesComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,8 @@ import { ToastrModule } from 'ngx-toastr';
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [
     AngularFirestore,
-    ContactInfoService
+    ContactInfoService,
+    ResourcesService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,18 @@
+ <div class="container">
+    <div class="row">
+      <div *ngFor="let resource of resourcesService.resources" class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+          <div class="view zoom">
+            <img src="{{ resource.backgroundImage }}" class="card-img-top" alt="photo">
+            <div class="mask flex-center waves-effect waves-light {{ resource.color }}">
+                <h3 class="white-text text-center">{{ resource.title }}</h3>
+            </div>
+          </div>
+          <div class="card-body text-center">
+            <p class="card-text black-text">{{ resource.description }}</p>
+            <a href="{{ resource.link }}" target="_blank" class="btn btn-outline-black btn-md waves-effect">See</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
